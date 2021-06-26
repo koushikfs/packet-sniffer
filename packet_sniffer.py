@@ -57,6 +57,6 @@ def print_packet(packet):
         pass
 
 
-print("Packet Sniffer coded by @koushikk11\n")
+print("\nPacket Sniffer coded by @koushikk11\n")
 values = arguments()
 sniff(values.interface)
