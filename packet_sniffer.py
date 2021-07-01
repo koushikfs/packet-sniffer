@@ -58,5 +58,6 @@ def print_packet(packet):
 
 
 print("\nPacket Sniffer coded by @koushikk11\n")
+print("Date:26/06/2021\n")
 values = arguments()
 sniff(values.interface)
