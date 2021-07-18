@@ -4,7 +4,8 @@ import optparse
 
 
 def arguments():
-    arguments = optparse.OptionParser()
+    optparse.OptionParser.format_epilog = lambda self, formatter: self.epilog
+    arguments = optparse.OptionParser(epilog="\nhow to use ?\n  1) start arp-spoofer\n  2) run this script\n\nThat's it the sniffing will be started\n")
     arguments.add_option("-i", "--interface", metavar='\b', dest="interface", help="specify the interface the packets are flowing through")
     values, options = arguments.parse_args()
     if not values.interface:
@@ -60,6 +61,6 @@ def print_packet(packet):
 print("\nPacket Sniffer coded by @koushikk11\n")
 print("Github: koushikfs")
 print("Date:26/06/2021\n")
-print("This script snifs the packets flowing through the interface given and prints URL, Possible Credentials, User_agent and Cookies\n* Make sure ARP spoofer is running before running this script\n")
+print("This script snifs the packets flowing through the interface given and prints URL, Possible Credentials, User_agent and Cookies\n* Make sure ARP spoofer is running before running this script\n* Use -h for more\n")
 values = arguments()
 sniff(values.interface)
