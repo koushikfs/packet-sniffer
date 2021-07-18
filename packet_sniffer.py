@@ -58,6 +58,8 @@ def print_packet(packet):
 
 
 print("\nPacket Sniffer coded by @koushikk11\n")
+print("Github: koushikfs")
 print("Date:26/06/2021\n")
+print("This script snifs the packets flowing through the interface given and prints URL, Possible Credentials, User_agent and Cookies\n* Make sure ARP spoofer is running before running this script\n")
 values = arguments()
 sniff(values.interface)
